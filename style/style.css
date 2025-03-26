@@ -1,0 +1,43 @@
+html, body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+  }
+  
+  .container {
+    position: relative;
+    width: 300px;
+    height: 5px;
+    background-color: #555;
+  }
+  
+  .ball {
+    width: 200px;
+    height: 200px;
+    background: url('./img/ball.png') no-repeat center/cover;
+    border-radius: 50%;
+    position: absolute;
+    top: -185px;
+    left: 0;
+    animation: rollAndFall 3s linear infinite;
+  }
+  
+  @keyframes rollAndFall {
+    0% {
+      left: 0;
+      top: -185px;
+      transform: rotate(0deg);
+    }
+    50% {
+      left: 95%;
+      top: -185px;
+      transform: rotate(460deg);
+    }
+    100% {
+      left: 95%;
+      top: 500px;
+      transform: rotate(750deg);
+    }
+  }
